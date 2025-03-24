@@ -1,21 +1,14 @@
-
 return {
-
     {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        config = function()
-            require('rose-pine').setup({
-                disable_background = false,
-                styles = {
-                    italic = false,
-                },
-            })
-
-            vim.cmd("colorscheme rose-pine-moon")
-
-        end
-    },
-
+    "sainnhe/gruvbox-material",
+    config = function()
+        vim.g.gruvbox_material_background = "soft" -- or "hard"
+        vim.g.gruvbox_material_enable_bold = 1
+        vim.g.gruvbox_material_enable_italic = 0
+        vim.o.background = "dark" -- or "dark"
+        vim.cmd([[colorscheme gruvbox-material]])
+    end,
+}
 
 }
+
